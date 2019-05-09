@@ -548,7 +548,7 @@ static uint16_t www_client_internal_datafill_cb(uint8_t fd) {
                          client_hoststr, client_additionalheaderline);
         } else {
             const char* ahl = client_additionalheaderline;
-            bfill.emit_p(PSTR("POST $F HTTP/1.0\r\n"
+            bfill.emit_p(PSTR("POST $S HTTP/1.0\r\n"
                               "Host: $F\r\n"
                               "$F$S"
                               "Accept: */*\r\n"
